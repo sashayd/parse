@@ -1,0 +1,22 @@
+char letter digit whitespace specific_char ( ) * + ? |
+
+@@nonterminals
+
+E F G S
+
+@@productions
+
+S -> E
+E -> F
+F -> G
+@paranthesis G -> ( E )
+@or E -> E | F
+@and F -> F G
+@star G -> G *
+@plus G -> G +
+@question G -> G ?
+G -> char
+G -> letter
+G -> digit
+G -> whitespace
+G -> specific_char
