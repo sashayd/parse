@@ -569,7 +569,7 @@ static void _prSLRHelper_fill_(_prSLRHelper* self, const prGrammar* grammar) {
     self->num_of_tokens = grammar->num_of_tokens;
 
     /* compute necessary */
-    ssSubset_create_(&self->appearing_tokens, sizeof(grammar->num_of_tokens));
+    ssSubset_create_(&self->appearing_tokens, grammar->num_of_tokens);
     ssSubset_add_(&self->appearing_tokens, grammar->num_of_tokens - 2);
     do {
         got_something_new = false;
